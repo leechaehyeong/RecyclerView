@@ -5,6 +5,7 @@ import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 import androidx.swiperefreshlayout.widget.SwipeRefreshLayout;
 
+import android.content.Intent;
 import android.location.Address;
 import android.location.Geocoder;
 import android.os.Bundle;
@@ -52,5 +53,16 @@ public class MainActivity extends AppCompatActivity {
 
         }
         mRecyclerAdapter.setFriendList(mitemDatas);
+
+
+        //페이지 이동
+        Button Button_add = findViewById(R.id.addBtn);
+        Button_add.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(getApplicationContext(),itemInfo.class);
+                startActivity(intent);
+            }
+        });
     }
 }
