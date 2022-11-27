@@ -25,7 +25,7 @@ public class MainActivity extends AppCompatActivity {
 
     private RecyclerView mRecyclerView;
     private MyRecyclerAdapter mRecyclerAdapter;
-    private ArrayList<FriendItem> mfriendItems;
+    private ArrayList<ItemData> mitemDatas;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -43,14 +43,14 @@ public class MainActivity extends AppCompatActivity {
         mRecyclerView.setLayoutManager(new LinearLayoutManager(this, RecyclerView.VERTICAL,false));
 
         /* adapt data */
-        mfriendItems = new ArrayList<>();
+        mitemDatas = new ArrayList<>();
         for(int i=1;i<=10;i++){
             if(i%2==0)
-                mfriendItems.add(new FriendItem(i,i+"번째 재료",i+"개",i+"유통기한"));
+                mitemDatas.add(new ItemData(i,i+"번째 재료",i+"개",i+"유통기한"));
             else
-                mfriendItems.add(new FriendItem(i,i+"번째 재료",i+"개",i+"유통기한"));
+                mitemDatas.add(new ItemData(i,i+"번째 재료",i+"개",i+"유통기한"));
 
         }
-        mRecyclerAdapter.setFriendList(mfriendItems);
+        mRecyclerAdapter.setFriendList(mitemDatas);
     }
 }

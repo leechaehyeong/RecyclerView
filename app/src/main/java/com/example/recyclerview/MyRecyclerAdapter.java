@@ -13,7 +13,7 @@ import java.util.ArrayList;
 
 public class MyRecyclerAdapter extends RecyclerView.Adapter<MyRecyclerAdapter.ViewHolder> {
 
-    private ArrayList<FriendItem> mFriendList;
+    private ArrayList<ItemData> mItemList;
 
     @NonNull
     @Override
@@ -24,17 +24,17 @@ public class MyRecyclerAdapter extends RecyclerView.Adapter<MyRecyclerAdapter.Vi
 
     @Override
     public void onBindViewHolder(@NonNull MyRecyclerAdapter.ViewHolder holder, int position) {
-        holder.onBind(mFriendList.get(position));
+        holder.onBind(mItemList.get(position));
     }
 
-    public void setFriendList(ArrayList<FriendItem> list){
-        this.mFriendList = list;
+    public void setFriendList(ArrayList<ItemData> list){
+        this.mItemList = list;
         notifyDataSetChanged();
     }
 
     @Override
     public int getItemCount() {
-        return mFriendList.size();
+        return mItemList.size();
     }
 
     class ViewHolder extends RecyclerView.ViewHolder {
@@ -51,7 +51,7 @@ public class MyRecyclerAdapter extends RecyclerView.Adapter<MyRecyclerAdapter.Vi
             date = (TextView) itemView.findViewById(R.id.date);
         }
 
-        void onBind(FriendItem item){
+        void onBind(ItemData item){
 
             name.setText(item.getName());
             amount.setText(item.getAmount());
