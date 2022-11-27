@@ -38,7 +38,7 @@ public class MyRecyclerAdapter extends RecyclerView.Adapter<MyRecyclerAdapter.Vi
     }
 
     class ViewHolder extends RecyclerView.ViewHolder {
-        ImageView profile;
+
         TextView name;
         TextView amount;
         TextView date;
@@ -52,7 +52,7 @@ public class MyRecyclerAdapter extends RecyclerView.Adapter<MyRecyclerAdapter.Vi
         }
 
         void onBind(FriendItem item){
-            profile.setImageResource(item.getResourceId());
+
             name.setText(item.getName());
             amount.setText(item.getAmount());
             date.setText(item.getDate());
