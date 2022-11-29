@@ -36,9 +36,9 @@
     <!--여기서부터 재료 추가정보 *-->
 
     <LinearLayout
-        android:layout_marginTop="45dp"
+        android:layout_marginTop="10dp"
         android:layout_width="match_parent"
-        android:layout_height="69dp">
+        android:layout_height="50dp">
 
         <TextView
             android:id="@+id/ingredientNameTxt"
@@ -56,7 +56,7 @@
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="65dp">
+        android:layout_height="wrap_content">
 
         <TextView
             android:id="@+id/ingredientAmountTxt"
